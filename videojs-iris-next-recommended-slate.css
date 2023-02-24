@@ -1,0 +1,192 @@
+/**
+ * css for videojs-iris-next-recommended-slate
+ * With the default plugins for postcss you can
+ * - @import files, they will be inlined during build
+ * - not worry about browser prefixes, they will be handled
+ * - nest selectors. This follows the css specification that is
+ *   currently out on some browsers. See https://tabatkins.github.io/specs/css-nesting/
+ * - custom properties (aka variables) via the var(--var-name) syntax. See
+ *   https://www.w3.org/TR/css-variables-1/
+ */
+@font-face {
+  font-weight: 400;
+  font-family: "Inter";
+  font-style: normal;
+  src: url("../../assets/fonts/Inter-Regular.ttf");
+}
+div[id$=end-next-slate].iris-upnext {
+  display: flex;
+  flex-direction: row;
+  bottom: unset !important;
+  font-family: "Inter";
+  max-width: 18rem !important;
+  min-width: 18rem !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: transparent !important;
+}
+div[id$=end-next-slate].iris-upnext:hover {
+  -webkit-filter: none !important;
+}
+div[id$=end-next-slate] .iris-slate-image {
+  order: 0;
+  width: 9rem !important;
+  height: 7.5rem !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 0 !important;
+}
+div[id$=end-next-slate] .iris-slate-image .iris-slate-timer-container {
+  display: none !important;
+}
+div[id$=end-next-slate] .iris-slate-image .nzme-iris-video-duration-label {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.1875rem;
+  padding: 0.25rem !important;
+  color: white;
+  top: 0;
+  left: 0;
+}
+div[id$=end-next-slate] .iris-slate-text-container {
+  order: 1;
+}
+div[id$=end-next-slate] .iris-slate-text-container .iris-slate-text {
+  display: none !important;
+}
+div[id$=end-next-slate] .iris-slate-text-container h3 {
+  display: -webkit-box !important;
+  height: 5rem !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 4 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-family: "Inter" !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  line-height: 0.9375rem !important;
+  padding-left: 0 !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.75rem 1rem !important;
+  max-width: 9rem !important;
+  min-width: 9rem !important;
+  border-radius: 0 0.1875rem 0 0;
+}
+div[id$=end-next-slate] .iris-slate-text-container .nzme-iris-play-button {
+  position: relative;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  width: 9rem !important;
+  margin-top: 0.25rem !important;
+  height: 2.5rem;
+  border-radius: 0 0 0.1875rem 0 !important;
+  cursor: pointer;
+}
+div[id$=end-next-slate] .iris-slate-text-container .nzme-iris-play-button .btn {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 888;
+  border-radius: 0 0 0.1875rem 0 !important;
+}
+div[id$=end-next-slate] .iris-slate-text-container .nzme-iris-play-button .btn span {
+  font-family: "Inter" !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important;
+  line-height: 1rem !important;
+}
+div[id$=end-next-slate] .iris-slate-text-container .nzme-iris-play-button .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  z-index: 777;
+  background: #38a3d7;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 0 0 0.1875rem 0 !important;
+}
+div[id$=end-next-slate] .iris-slate-text-container .nzme-iris-play-button.active .progress {
+  opacity: 1;
+  animation: loading 10s ease 0s;
+}
+
+@media screen and (min-width: 481px) {
+  div[id$=end-next-slate].iris-upnext {
+    flex-direction: column;
+    max-width: 14.6875rem !important;
+    min-width: 14.6875rem !important;
+    padding: 0 !important;
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  div[id$=end-next-slate].iris-upnext .iris-slate-image {
+    order: 0;
+    width: 100% !important;
+    height: 8.3125rem !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.1875rem 0.1875rem 0 0;
+  }
+  div[id$=end-next-slate].iris-upnext .iris-slate-text-container {
+    order: 1;
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+  div[id$=end-next-slate].iris-upnext .iris-slate-text-container h3 {
+    max-width: 14.6875rem !important;
+    min-width: 14.6875rem !important;
+    height: auto !important;
+    -webkit-line-clamp: 2 !important;
+    border-radius: 0 0 0.1875rem 0.1875rem !important;
+  }
+  div[id$=end-next-slate].iris-upnext .iris-slate-text-container .nzme-iris-play-button {
+    width: 100% !important;
+    border-radius: 0.1875rem !important;
+  }
+  div[id$=end-next-slate].iris-upnext .iris-slate-text-container .nzme-iris-play-button .btn,
+  div[id$=end-next-slate].iris-upnext .iris-slate-text-container .nzme-iris-play-button .progress {
+    border-radius: 0.1875rem !important;
+  }
+}
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  5% {
+    width: 0%;
+  }
+  10% {
+    width: 15%;
+  }
+  30% {
+    width: 40%;
+  }
+  50% {
+    width: 55%;
+  }
+  80% {
+    width: 90%;
+  }
+  95% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/*# sourceMappingURL=videojs-iris-next-recommended-slate.css.map */
